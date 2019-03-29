@@ -95,12 +95,15 @@ func main() {
 		address string
 	}
 
-	var results []Result
-	//获取结果集，非常的不方便
-	db.Debug().Raw("SELECT * from user_model").Scan(&results)
-	for i, _ := range results {
+	// var results []Result
+	//这里不能用Result，因为他没有gorm的标签，所以返回的结果集为空
+	results := make([]*UserModel, 0)
+	//获取结果集
+	db.Debug().Raw("SELECT * from user_model").Find(&results)
+	fmt.Println(results)
+	for _, result := range results {
 
-		fmt.Println(&results[i].id)
+		fmt.Println(result.Id, result.Name, result.Address)
 	}
 
 }
