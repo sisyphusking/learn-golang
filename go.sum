@@ -1,2 +1,4 @@
+github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb h1:xpDeYJF7P9jgczf4KjRQOoqPrrKs56vqMBiWOXnSoQM=
+github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb/go.mod h1:3NRM3Fi26eZwRU/33Y0fH7YaVlo6EDQUAE2CBQ/snQ0=
 github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
