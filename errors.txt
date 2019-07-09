@@ -1,0 +1,1 @@
+ERROR: 2019/07/09 17:05:48 main.go:47: Something has failed
