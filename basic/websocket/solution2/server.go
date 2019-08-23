@@ -10,10 +10,6 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-///////////////////////////////////////////////////////
-// 大家有代码和工作上的疑难问题，可以加老师的微信交流：120848369
-///////////////////////////////////////////////////////
-
 // http升级websocket协议的配置
 var wsUpgrader = websocket.Upgrader{
 	// 允许所有CORS跨域请求
@@ -41,7 +37,7 @@ type wsConnection struct {
 
 func (wsConn *wsConnection) wsReadLoop() {
 	for {
-		// 读一个message
+		// 读一个message,如果没有消息过来，会一直在这里阻塞
 		msgType, data, err := wsConn.wsSocket.ReadMessage()
 		if err != nil {
 			goto error
@@ -51,6 +47,7 @@ func (wsConn *wsConnection) wsReadLoop() {
 			data,
 		}
 		// 放入请求队列
+		fmt.Println(req)
 		select {
 		case wsConn.inChan <- req:
 		case <-wsConn.closeChan:
