@@ -48,4 +48,20 @@ func main() {
 	// for res := range quit {
 	// 	fmt.Println(res)
 	// }
+
+	//具体可以看下面的test例子， 有加上close，所以可以使用range
+}
+
+func test() {
+	ch := make(chan int)
+	go func() {
+		defer close(ch)
+		for i := 0; i < 100; i++ {
+			ch <- i
+		}
+	}()
+
+	for x := range ch {
+		fmt.Println(x)
+	}
 }
