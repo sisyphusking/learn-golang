@@ -1,5 +1,6 @@
 package main
 
+//使用sarama会出现数据没有消费的情况，请注意！！！！！， 参考sarama-cluster，这个可以
 //go run test.go -brokers="XXXX:9092" -topics="test" -group="example"
 
 import (
