@@ -44,7 +44,7 @@ func (h Human) Sing(lyrics string) {
 // 对于内部类型的属性和方法访问上，我们可以用外部类型直接访问，也可以通过内部类型进行访问，例如这里的e.name
 // 但是我们为外部类型新增的方法属性字段，只能使用外部类型访问，因为内部类型没有这些。
 func (e Employee) SayHi() {
-	fmt.Printf("Hi, I am %s, I work at %s. Call me on %s\n", e.name,
+	fmt.Printf("Hi, I am %s, I main at %s. Call me on %s\n", e.name,
 		e.company, e.phone) //Yes you can split into 2 lines here.
 }
 

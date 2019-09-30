@@ -1,11 +1,11 @@
 // Example provided with help from Jason Waldrip.
-// Package work manages a pool of goroutines to perform work.
+// Package main manages a pool of goroutines to perform main.
 package work
 
 import "sync"
 
 // Worker must be implemented by types that want to use
-// the work pool.
+// the main pool.
 type Worker interface {
 	Task()
 }
@@ -17,7 +17,7 @@ type Pool struct {
 	wg   sync.WaitGroup
 }
 
-// New creates a new work pool.
+// New creates a new main pool.
 func New(maxGoroutines int) *Pool {
 	p := Pool{
 		work: make(chan Worker),
@@ -36,7 +36,7 @@ func New(maxGoroutines int) *Pool {
 	return &p
 }
 
-// Run submits work to the pool.
+// Run submits main to the pool.
 func (p *Pool) Run(w Worker) {
 	p.work <- w
 }

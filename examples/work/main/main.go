@@ -1,7 +1,7 @@
 package main
 
 import (
-	"learn-golang/examples/work/work"
+	"learn-golang/examples/work"
 	"log"
 	"sync"
 	"time"
@@ -25,7 +25,9 @@ func (m *namePrinter) Task() {
 }
 
 func main() {
-	//同步的方式
+
+	//非常经典的用法
+	//类似于同步的方式，创建一个工作池，一次只能接收一条数据
 	p := work.New(2)
 	var wg sync.WaitGroup
 	wg.Add(100 * len(names))

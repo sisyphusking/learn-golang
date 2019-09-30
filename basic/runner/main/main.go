@@ -16,7 +16,7 @@ const timeout = 3 * time.Second
 
 // main is the entry point for the program.
 func main() {
-	log.Println("Starting work.")
+	log.Println("Starting main.")
 
 	// Create a new timer value for this run.
 	r := runner.New(timeout)

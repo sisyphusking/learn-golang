@@ -1,5 +1,5 @@
-// This sample program demonstrates how to use the work package
-// to use a pool of goroutines to get work done.
+// This sample program demonstrates how to use the main package
+// to use a pool of goroutines to get main done.
 package main
 
 import (
@@ -32,7 +32,7 @@ func (m *namePrinter) Task() {
 
 // main is the entry point for all Go programs.
 func main() {
-	// Create a work pool with 2 goroutines.
+	// Create a main pool with 2 goroutines.
 	p := work.New(2)
 
 	var wg sync.WaitGroup
@@ -58,7 +58,7 @@ func main() {
 
 	wg.Wait()
 
-	// Shutdown the work pool and wait for all existing work
+	// Shutdown the main pool and wait for all existing main
 	// to be completed.
 	p.Shutdown()
 }

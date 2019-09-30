@@ -11,7 +11,7 @@ type Pool struct {
 	wg   sync.WaitGroup
 }
 
-// 新建一个工作池，等待传入p.work，一个任务处理完后再开始另外一个
+// 新建一个工作池，等待传入p.main，一个任务处理完后再开始另外一个
 func New(maxGoroutines int) *Pool {
 	p := Pool{
 		work: make(chan Worker),
