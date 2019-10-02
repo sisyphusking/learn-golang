@@ -1,4 +1,4 @@
-package main
+package solution1
 
 import (
 	"fmt"
@@ -8,6 +8,8 @@ import (
 	"time"
 )
 
+//使用计数器实现请求限流
+//启动一个计数器，每次服务请求会把计数器加一，同时到达指定的时间间隔后会把计数器清零；
 type RequestLimitService struct {
 	Interval time.Duration
 	MaxCount int
