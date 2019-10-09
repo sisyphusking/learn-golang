@@ -9,5 +9,6 @@ require (
 	github.com/jinzhu/gorm v1.9.11
 	github.com/lexkong/log v0.0.0-20180607165131-972f9cd951fc
 	github.com/spf13/viper v1.4.0
+	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
 	gopkg.in/jcmturner/goidentity.v3 v3.0.0 // indirect
 )
