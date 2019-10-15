@@ -12,3 +12,5 @@ require (
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
 	gopkg.in/jcmturner/goidentity.v3 v3.0.0 // indirect
 )
+
+go 1.13
