@@ -1,1 +1,2 @@
 ERROR: 2019/07/09 17:05:48 main.go:47: Something has failed
+ERROR: 2020/01/13 15:06:11 main.go:47: Something has failed

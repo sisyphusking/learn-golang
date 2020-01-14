@@ -4,13 +4,13 @@ package main
 
 import (
 	"io"
+	"learn-golang/basic/pool"
 	"log"
 	"math/rand"
 	"sync"
 	"sync/atomic"
 	"time"
-
-	"github.com/goinaction/code/chapter7/patterns/pool"
+	//"github.com/goinaction/code/chapter7/patterns/pool"
 )
 
 const (
