@@ -4,11 +4,11 @@
 package main
 
 import (
+	"learn-golang/basic/runner"
 	"log"
 	"os"
 	"time"
-
-	"github.com/goinaction/code/chapter7/patterns/runner"
+	//"github.com/goinaction/code/chapter7/patterns/runner"
 )
 
 // timeout is the number of second the program has to finish.
