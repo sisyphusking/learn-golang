@@ -3,11 +3,11 @@
 package main
 
 import (
+	"learn-golang/basic/work"
 	"log"
 	"sync"
 	"time"
-
-	"github.com/goinaction/code/chapter7/patterns/work"
+	//"github.com/goinaction/code/chapter7/patterns/work"
 )
 
 // names provides a set of names to display.
