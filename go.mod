@@ -2,6 +2,7 @@ module learn-golang
 
 require (
 	github.com/Shopify/sarama v1.23.1
+	github.com/abusizhishen/do-once-while-concurrent v1.0.1 // indirect
 	github.com/bsm/sarama-cluster v2.1.15+incompatible
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb
