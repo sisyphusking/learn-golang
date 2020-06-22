@@ -3,7 +3,7 @@ package main
 // 每个子目录中只能存在一个package
 // 引入包的时候，go会使用子目录名作为包的路径，而你在代码中真正使用时，却要使用你package的名称。
 import (
-	"gogogo/channels/channel"
+	"learn-golang/basic/channels/channel"
 	"log"
 	"os"
 	"time"

@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	cluster "github.com/bsm/sarama-cluster"
-	"github.com/lexkong/log"
 	"github.com/spf13/viper"
 )
 
@@ -25,13 +25,13 @@ func Consume(message chan string, closeChan chan byte) {
 
 	go func() {
 		for err := range consumer.Errors() {
-			log.Infof("Consumer Error: %s\n", err.Error())
+			log.Printf("Consumer Error: %s\n", err.Error())
 		}
 	}()
 
 	go func() {
 		for ntf := range consumer.Notifications() {
-			log.Infof("Consumer Rebalanced: %+v", ntf)
+			log.Printf("Consumer Rebalanced: %+v", ntf)
 		}
 	}()
 
@@ -39,11 +39,11 @@ func Consume(message chan string, closeChan chan byte) {
 		select {
 		case msg, ok := <-consumer.Messages():
 			if ok {
-				//log.Infof("received msg: %s\n", msg.Value)
+				log.Printf("received msg: %s\n", msg.Value)
 				message <- string(msg.Value)
 				consumer.MarkOffset(msg, "")
 			} else {
-				log.Error("received kafka msg error", fmt.Errorf(""))
+				log.Printf("received kafka msg error", fmt.Errorf(""))
 			}
 		case <-closeChan:
 			break
