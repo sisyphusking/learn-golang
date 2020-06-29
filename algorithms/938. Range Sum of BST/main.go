@@ -64,10 +64,10 @@ func rangeSumBST1(root *TreeNode, L int, R int) int {
 		}
 	}
 	if root.Left != nil {
-		sum += rangeSumBST(root.Left, L, R)
+		sum += rangeSumBST1(root.Left, L, R)
 	}
 	if root.Right != nil {
-		sum += rangeSumBST(root.Right, L, R)
+		sum += rangeSumBST1(root.Right, L, R)
 	}
 	return sum
 }
