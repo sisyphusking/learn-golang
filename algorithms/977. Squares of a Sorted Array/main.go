@@ -36,3 +36,21 @@ func (b ByValue) Less(i, j int) bool {
 func (b ByValue) Swap(i, j int) {
 	b[i], b[j] = b[j], b[i]
 }
+
+//双指针
+func SortArray(a []int) []int {
+	var ret = make([]int, len(a))
+	start, end := 0, len(a)-1
+	index := len(a) - 1
+	for start <= end {
+		if a[start]*a[start] < a[end]*a[end] {
+			ret[index] = a[end] * a[end]
+			end--
+		} else {
+			ret[index] = a[start] * a[start]
+			start++
+		}
+		index--
+	}
+	return ret
+}
